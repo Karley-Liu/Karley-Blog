@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册 -Karley's Blog</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="/layui/layui.js"></script>
+</head>
+<body>
+<div class="loginForm">
+    <form action="" class="layui-form">
+        <span>欢迎成为Karley的好朋友</span>
+        <div class="layui-form-item">
+            <input type="text" class="layui-input" name="username" id="username" lay-verify="required" placeholder="请输入用户名">
+        </div>
+        <div class="layui-form-item">
+            <input type="text" class="layui-input" name="email" id="email" lay-verify="required" placeholder="请输入邮箱">
+        </div>
+        <div class="layui-form-item">
+            <input type="password" class="layui-input" name="password" id="password" lay-verify="required" placeholder="请输入密码">
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit type="button" id="register">注册</button>
+                <button class="layui-btn layui-btn-primary" type="reset">重置</button>
+            </div>
+        </div>
+        <span>Karley's Blog注册账号只能体验高级功能以及留言，无法发表文章~</span>
+        <br>
+        <span>已有账号？去<a href="/login">登录</a>8</span>
+    </form>
+</div>
+<script src="/js/jquery/jquery-3.4.1.min.js"></script>
+<script src="/js/register.js"></script>
+</body>
+</html>

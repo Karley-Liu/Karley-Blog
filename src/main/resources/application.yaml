@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+#    prefix: classpath:/templates/
+#    suffix: html
+#    encoding: UTF-8
+    cache: false
+
+#    rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+#  datasource:
+#    username: root
+#    password: 718293
+#    url: jdbc:mysql://localhost:3306/karley?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=true
+#    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:Mapper/*.xml
+  type-aliases-package: com.lin.karley.pojo

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>发布笔记 -Karley's Blog</title>
+</head>
+<!--layui样式-->
+<link rel="stylesheet" href="/layui/css/layui.css">
+<!--部分自定义样式-->
+<link rel="stylesheet" href="/easyeditor/css/easyeditor.css">
+<!--图标-->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1531710_xb357ub1wmg.css">
+<body>
+<div th:replace="~{common/bar::bar}"></div>
+
+<div class="layui-container">
+    <textarea name="content" id="L_content" style="" lay-verify="required" placeholder="请输入笔记内容"
+              class="layui-textarea editor"></textarea>
+</div>
+
+<script src="/easyeditor/js/marked.min.js" type="text/javascript" charset="UTF-8"></script>
+<script src="/easyeditor/layui/layui.js"></script>
+<script>
+    layui.config({
+        base:'/easyeditor/mods/'
+    }).extend({
+        easyeditor:'easyeditor'
+    }).use(['easyeditor'],function () {
+        var easyeditor = layui.easyeditor;
+        // 初始化markdown编辑器
+        easyeditor.init({
+            elem:".editor"
+            ,uploadUrl:'/upload' //图片上传地址
+            ,videoUploadUrl:'/upload'
+            ,videoUploadSize:'102400'
+            ,uploadSize:''
+        }),
+        {
+            code:0,
+            msg:'图片保存失败',
+            url:'/upload'  //图片上传成功后图片访问路径
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录 -Karley's Blog</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="/layui/layui.js"></script>
+</head>
+<body>
+<div class="loginForm">
+    <form action="" class="layui-form">
+        <span>欢迎回来</span>
+        <div class="layui-form-item">
+            <input type="text" class="layui-input" name="username" id="username" lay-verify="required" placeholder="请输入用户名">
+        </div>
+        <div class="layui-form-item">
+            <input type="password" class="layui-input" name="password" id="password" lay-verify="required" placeholder="请输入密码">
+        </div>
+        <div class="layui-form-item">
+            <input class="layui-form" type="checkbox" name="remember" lay-filter="remember" lay-skin="switch" id="remember" lay-text="记住我|不记住我" checked>
+        </div>
+        <span>还没有账号？先去<a href="/register">注册</a>一个</span>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit id="login" type="button">登录</button>
+                <button class="layui-btn layui-btn-primary" type="reset">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script src="/js/jquery/jquery-3.4.1.min.js"></script>
+<script src="/js/login.js"></script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我 -Karley's Blog</title>
+</head>
+<body>
+<div th:replace="~{common/bar::bar(active='contact')}"></div>
+<div>
+    <div class="left-nav">
+        <div>
+            <span shiro:user th:text="${session.user.getUsername()}"></span>
+        </div>
+        <div class="liner">
+            <span>----联系人----</span>
+        </div>
+        <div class="customers">
+            <div>
+                <p>username</p>
+                <p>在线状态</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-nav">
+        <div class="chatBox"></div>
+        <div class="msgBox">
+            <input type="text" name="message" id="message">
+            <button type="button">发送信息</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
