@@ -144,11 +144,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>springboot-starter-test</artifactId>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>springboot-starter-test</artifactId>
             <!--<version></version>-->
-        <!--</dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>

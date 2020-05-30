@@ -38,7 +38,7 @@
         <ul class="welcome-text">
             <!--欢迎来到<span class="name">小明</span>的博客~-->
             <span shiro:guest><a href="/login">登录</a></span>
-            <span shiro:user th:text="${session.user.getUsername()}">
+            <span shiro:principal property="username">
                 <!--<dl class="layui-nav-child">-->
                     <!--&lt;!&ndash;二级菜单&ndash;&gt;-->
                     <!--<dd><a href="/releasenote">发布笔记</a></dd>-->
